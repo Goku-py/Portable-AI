@@ -7,14 +7,6 @@ Turn any USB stick into an offline AI chatbot. No internet needed after setup.
 - A USB pendrive — **8 GB minimum** (most models fit; bigger models need a bigger drive)
 - Any Windows PC with internet — only for the one-time model download
 
-## Files on this pendrive
-
-| File                    | What it does                                              |
-| ----------------------- | --------------------------------------------------------- |
-| `check-system.bat`      | Checks the PC and shows the best model + download link    |
-| `run-ai.bat`            | Starts the AI and opens the chat in your browser          |
-| `llamafile-0.10.5.exe`  | The AI engine (runs on any PC, no install)                |
-
 ## Setup — one time only
 
 **1. Get a pendrive (8 GB minimum).**
@@ -24,13 +16,16 @@ Smaller drives only fit tiny models (1-3B). Model file sizes by PC class: 0.5B =
 Right-click the drive in File Explorer → **Format** → File system: **exFAT** → Start.
 (FAT32 cannot hold files over 4 GB, and most AI models are bigger.)
 
-**3. Copy these 3 files onto the pendrive:**
+**3b. Get the latest llamafile from GitHub:**
+The official project is https://github.com/mozilla-ai/llamafile. Check its **Releases** page and download the latest `llamafile-<version>` file, then copy it over the one on the pendrive (rename it to `llamafile-0.10.5.exe` if the version differs — `run-ai.bat` looks for that exact name).
+
+**4. Copy these 3 files onto the pendrive:**
 `check-system.bat`, `run-ai.bat`, `llamafile-0.10.5.exe`
 
-**4. Run `check-system.bat` on the target PC** (the PC that will run the AI).
+**5. Run `check-system.bat` on the target PC** (the PC that will run the AI).
 It checks the PC's hardware, searches the internet for the best-fitting model, and prints the exact model name plus a direct download link.
 
-**5. Download the model and copy it to the pendrive.**
+**6. Download the model and copy it to the pendrive.**
 On any PC with internet, open the link, download the `.gguf` file, and copy it into the pendrive (same folder as the other files).
 
 Done. The pendrive is now a portable AI.
