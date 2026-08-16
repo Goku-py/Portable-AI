@@ -17,10 +17,10 @@ Right-click the drive in File Explorer → **Format** → File system: **exFAT**
 (FAT32 cannot hold files over 4 GB, and most AI models are bigger.)
 
 **3b. Get the latest llamafile from GitHub:**
-The official project is https://github.com/mozilla-ai/llamafile. Check its **Releases** page and download the latest `llamafile-<version>` file, then copy it over the one on the pendrive (rename it to `llamafile-0.10.5.exe` if the version differs — `run-ai.bat` looks for that exact name).
+The official project is https://github.com/mozilla-ai/llamafile. Check its **Releases** page and download the latest `llamafile-<version>` file, then copy it over the one on the pendrive (rename it to `llamafile-<version>.exe` if the version differs — `run-ai.bat` looks for that exact name).
 
 **4. Copy these 3 files onto the pendrive:**
-`check-system.bat`, `run-ai.bat`, `llamafile-0.10.5.exe`
+`check-system.bat`, `run-ai.bat`, `llamafile-<version>.exe`
 
 **5. Run `check-system.bat` on the target PC** (the PC that will run the AI).
 It checks the PC's hardware, searches the internet for the best-fitting model, and prints the exact model name plus a direct download link.
